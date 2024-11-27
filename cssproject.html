@@ -1,0 +1,697 @@
+<html>
+
+<head>
+	<title>tralive</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<style>
+		* {
+			margin: 0%;
+			padding: 0%;
+			box-sizing: border-box;
+		}
+
+		.parent {
+			height: 15%;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: sticky;
+			background: cornflowerblue;
+		}
+
+		.child1 {
+			width: 20%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.child2 {
+			width: 60%;
+		}
+
+		.child2 ul {
+			height: 11%;
+			width: 90%;
+			display: flex;
+			justify-content: space-evenly;
+			list-style: none;
+		}
+
+		.child2 ul li {
+			margin: 4%;
+		}
+
+		.child2 ul li a {
+			text-decoration: none;
+		}
+
+		.img {
+			height: 20%;
+			width: 19%;
+			color: white;
+			background-image: linear-gradient (to top 0.yellow yellow);
+			display: flex;
+			align-items: center;
+			font-size: bold;
+		}
+
+		.parent2 {
+			height: 80%;
+			width: 100%;
+		}
+
+		.child3 {
+			display: grid;
+			place-content: center;
+			place-items: center;
+		}
+
+		.child3 h1 {
+			/* height: 1px; */
+			width: 100%;
+			text-align: center;
+			/* margin: 10% 0; */
+			position: relative;
+		}
+
+		.child3 h1::after {
+			content: '';
+			position: absolute;
+			bottom: 10px;
+			height: 15px;
+			left: 15%;
+			width: 70%;
+			background-color: orange;
+			z-index: -1;
+
+		}
+
+		.child3 {
+			font-family: "Nunito", sans-serif;
+			font-size: 2.5rem;
+			font-weight: bolder;
+			color: rgb(0, 9, 94);
+			padding: 6% 0;
+			/* height: 100%; */
+		}
+
+		.h3 {
+			color: rgb(0, 9, 94);
+			text-align: center;
+			font-size: 1rem;
+
+		}
+
+		.child4 button {
+			height: 70px;
+			width: 200px;
+			background-image: linear-gradient(to bottom, #010959 40%, #0b0c25);
+			text-decoration: none;
+			background-color: #000185;
+		}
+
+		.child4 {
+			display: flex;
+			justify-content: center;
+
+			a {
+				text-decoration: none;
+				color: aliceblue;
+			}
+		}
+
+		.child56 {
+			height: 90%;
+		}
+
+		.child5 {
+
+			height: 100%;
+			width: 98%;
+			margin: 0 10px;
+		}
+
+		.child6 {
+			position: relative;
+			position: none;
+			height: 60%;
+			width: 30%;
+			left: 39%;
+			bottom: 70%;
+		}
+
+		.child7 {
+			height: 10%;
+			text-align: center;
+		}
+
+		.child7 h3 {
+			color: rgb(84, 144, 218);
+			font-family: "Oswald", sans-serif;
+		}
+
+		.child7 h1 {
+			font-size: 3rem;
+			color: #111146;
+		}
+
+		.child8 {
+			height: 90vh;
+			display: flex;
+			align-items: center;
+			margin-top: 20px 0;
+			justify-content: center;
+		}
+
+		.child8 img {
+			position: relative;
+			height: 200px;
+			width: 55%;
+			padding: 3%;
+
+		}
+
+		.child8 img {
+			box-shadow: 4px 7px 7px 0px transparent;
+			cursor: pointer;
+			transition: 400ms;
+		}
+
+		.child8 img:hover {
+			filter: grayscale(1.03);
+			transition: 400ms;
+		}
+
+		.child8 .i1 {
+			display: flex;
+			font-style: italic;
+			font-size: 1.4rem;
+			font-weight: bolder;
+			color: #0b0c25;
+		}
+
+		.child8 .i3 {
+			display: flex;
+			font-style: italic;
+			font-size: 1.4rem;
+			font-weight: bolder;
+			color: black;
+		}
+
+		.child8 .i2 {
+			display: flex;
+			font-style: italic;
+			font-size: 1.4rem;
+			font-weight: bolder;
+			color: black;
+		}
+
+		.child8 p a {
+			text-decoration: none;
+		}
+
+		.parent3 {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
+		.parent3 .p31 {
+			display: flex;
+			height: 50%;
+			width: 50%;
+		}
+
+		.parent3 .p32 h1 {
+			display: flex;
+			height: 200px;
+			width: 80%;
+			font-size: 3rem;
+			color: #010959;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+
+		.parent3 .p32 button {
+			margin: 40px 20px;
+			height: 7%;
+			width: 35%;
+			align-items: center;
+			color: aliceblue;
+			background-color: #010959;
+			transition: 0.5s;
+			font-weight: bolder;
+			border-radius: 10px;
+		}
+
+		.parent3 .p32 button:hover {
+			color: aliceblue;
+			background-color: rgb(234, 234, 68);
+			z-index: -1;
+			transition: transform 0.1s;
+		}
+
+		.parent4 {
+			margin: -10% 0;
+			height: 90%;
+			width: 100%;
+			position: relative;
+			background-image: linear-gradient(#fdbb2d, #22c1c3);
+		}
+
+		.parent4 .child9 h1 {
+			position: absolute;
+			text-align: center;
+			font-size: 4rem;
+			top: 20%;
+			left: 30%;
+		}
+
+		.parent4 .child9 p {
+			position: absolute;
+			text-align: center;
+			text-align: justify;
+			top: 40%;
+			left: 15%;
+		}
+
+		.parent4 .p42 {
+			border-radius: 50%;
+			position: absolute;
+			bottom: 17%;
+			right: 55%;
+
+		}
+
+		.parent4 .child9 .p43 {
+			position: absolute;
+			bottom: 22%;
+			right: 45%;
+		}
+
+		.parent5 .child51 {
+			height: 40%;
+			min-width: 60%;
+			position: relative;
+		}
+
+		.parent5 .child51 .p52 {
+			position: absolute;
+			text-decoration: none;
+			top: 70%;
+			left: 50%
+		}
+
+		.parent5 .child51 .p53 {
+			position: absolute;
+			top: 80%;
+			left: 40%;
+			font-size: 2rem;
+			color: #09096f;
+		}
+
+		.parent6 {
+			height: 80%;
+			width: 95%;
+			position: relative;
+		}
+
+		.parent6 .d1 {
+			width: 28%;
+			align-items: center;
+			text-decoration: none;
+			position: absolute;
+			left: 13%;
+			font-size: 2rem;
+			padding: 10% 0px;
+		}
+
+		.parent6 .d1 a {
+			text-decoration: none;
+			color: black;
+			size: 20px;
+			size: 1rem;
+			cursor: pointer;
+			transition: 400ms;
+		}
+
+		.parent6 .d1 ul li:hover {
+			transform: scale(1.03);
+			column-gap: 30px;
+			box-shadow: 2px 2px 0px 3px lightgreen;
+			color: rgb(17, 228, 140);
+		}
+
+		.parent6 .d1 ul {
+			list-style: none;
+		}
+
+		.parent6 .d2 {
+			width: 40%;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			left: 45%;
+		}
+
+		.parent6 .d3 button {
+			height: 50px;
+			width: 155px;
+			position: absolute;
+			align-items: center;
+			font-size: large;
+			font-weight: bold;
+			bottom: 30%;
+			right: 40%;
+			border-radius: 10%;
+			color: aliceblue;
+			background-color: #fdbb2d;
+			transition: 0.2s;
+		}
+
+		.parent6 .d3 button:hover {
+			background-color: #000185;
+		}
+
+		.parent7 {
+			height: 80%;
+			width: 80%;
+			position: relative;
+
+		}
+
+		.parent7 .p71 {
+			position: absolute;
+			align-items: center;
+			left: 37%;
+		}
+
+		.parent7 .p72 a {
+			position: absolute;
+			left: 59%;
+			top: 29%;
+			color: aliceblue;
+		}
+
+		.parent7 .p72 a:hover {
+			background-color: red;
+		}
+
+		.parent7 .p72 h3 {
+			position: absolute;
+			left: 51%;
+			bottom: 49%;
+			font-size: 2rem;
+			color: white;
+			font-weight: bolder;
+			background: black;
+		}
+
+		.parent8 {
+			height: 40%;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.parent8 .p81 ul {
+			display: flex;
+			list-style: none;
+			justify-content: space-evenly;
+		}
+
+		.i81 {
+			transition: 0.6s;
+			filter: saturate(5%);
+		}
+
+		.i81:hover {
+			background-color: rgba(0, 0, 0, 0.2);
+			filter: saturate(100%);
+			transform: scale(1.1);
+		}
+
+		.i82 {
+			transition: 0.6s;
+			filter: saturate(5%);
+		}
+
+		.i82:hover {
+			background-color: rgb(0, 0, 0, 0.2);
+			filter: saturate(100%);
+			transform: scale(1.1);
+		}
+
+		.i83 {
+			transition: 0.6s;
+			filter: saturate(5%);
+		}
+
+		.i83:hover {
+			background-color: rgb(0, 0, 0, 0.2);
+			filter: saturate(100%);
+			transform: scale(1.1);
+		}
+
+		.i84 {
+			transition: 0.6s;
+			filter: saturate(5%);
+		}
+
+		.i84:hover {
+			background-color: rgb(0, 0, 0, 0.2);
+			filter: saturate(100%);
+			transform: scale(1.1);
+		}
+
+		.i85 {
+			transition: 0.4s;
+			filter: saturate(5%);
+		}
+
+		.i85:hover {
+			background-color: rgb(0, 0, 0, 0.2);
+			filter: saturate(100%);
+			transform: scale(1.1);
+			left: 50%;
+		}
+
+		.parent9 {
+			height: 60%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: #010959;
+			color: aliceblue;
+		}
+
+		.p91 {
+			height: 75%;
+			width: 20%;
+			list-style-type: none;
+		}
+
+		.parent9 a {
+			color: aqua;
+			text-decoration: none;
+			;
+		}
+
+		.p92 ul {
+			height: 75%;
+			width: 20%;
+			list-style-type: none;
+		}
+
+		.p93 ul {
+			height: 75%;
+			width: 20%;
+			list-style-type: none;
+		}
+
+		.p94 ul {
+			height: 75%;
+			width: 20%;
+			list-style-type: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<header class="parent">
+		<div class="child1">
+			<img src="./image/image1.png" height="70px" width="70px">
+			<h1>Tralive</h1>
+		</div>
+		<div class="child2">
+			<ul>
+				<li class="active"> <a href="cssproject.html">Home</a></li>
+				<li><a href="cssproject.html">Events</a></li>
+				<li>About</li>
+				<li>Blog</li>
+				<li>Contact</li>
+				<li class="img"><img src="./image/cell.png" height="30px" width="7%"> +10 67 678 2567</li>
+			</ul>
+		</div>
+	</header>
+	<section class="parent2">
+		<div class="child3">
+			<h1>Lifelong memories just a <br>few second away</h1>
+			<h6 class="h3">Lets start your journey with us,your dream will come true</h6>
+		</div>
+		<div class="child4">
+
+			<button><a href="cssproject.html">Explore Destination</a></button>
+		</div>
+	</section>
+	<section class="child56">
+		<div class="child5">
+			<div>
+				<img src="./image/css1.jpg" height="100%" width="100%">
+			</div>
+			<div class="child6">
+				<img src="./image/van.png" height="90%" width="90%">
+			</div>
+	</section>
+	</div>
+	<div class="child7">
+		<br>
+		<h3>check our best promotional tour</h3><br>
+		<h1>Upcoming Events</h1>
+	</div>
+	<section>
+		<div class="child8">
+			<div class="img1">
+				<img src="./image/highway.jpg" height="300px" width="200px">
+				<p class="i1">Mega-Turkey <a href="#">$1200</a>
+
+			</div>
+			<div class="img2">
+				<img src="./image/spitz.jpg" height="250px" width="200px">
+				<p class="i3">Spinland <a href="#">$1200</a>
+
+			</div>
+			<div class="img3">
+				<img src="./image/finlande.jpeg" height="250px" width="200px">
+				<p class="i2">Spitzberg <a href="#">$1200</a>
+			</div>
+		</div>
+	</section>
+	<section class="parent3">
+		<div class="p31">
+			<img src="./image/fix.jpg" alt="none" height="90%" width="80%">
+		</div>
+		<div class="p32">
+			<a href="#">About us</a>
+			<h1>Get Ready For Your Trip</h1>
+			<p>This trip are really create good experience for you all <br>we take all plans in interesting way please
+				trust us <br>so you don't worry about any so please enjoy the trip<br>Lorem ipsum dolor sit amet
+				consectetur adipisicing elit<br>Ex molestias officiis tempora maiores dolorem quisquam<br>distinctio
+				obcaecati animi quidem veritatis quos adipisci<br>quaerat deserunt illo deleniti debitis similique
+				iusto.</p>
+			<button>Book Your Destination</button>
+		</div>
+	</section>
+	<section class="parent4">
+		<div class="child9">
+			<h1>what customers say</h1>
+			<p class="p41"> Thus our trip was too good and all the customers are encourged us for more and many of them
+				wish for us through online.And otherthan that many of them visit <br>Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Fugit sequi ducimus quisquam consectetur tempore magni quas perferendis
+				corporis? Eum quis doloremque,<br>numquam consequuntur quas unde ducimus abdolore quibusdam
+				libero?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis inventore repellendus <br>ea
+				quas? Veniam, voluptas. Repudiandae optio alias a est omnis accusamus et, deleniti tempore nihil ea nisi
+				Lorem ipsum dolor sit amet consectetur adipisicing elit<br>Ab, libero nostrum. Modi ab quas, expedita
+				recusandae optio, harum libero tempora itaque, vel deleniti explicabo blanditiis doloremque eos sapiente
+				quod quia.</p>
+			<img src="./image/Yuvan.jpg" height="90px" width="10%" class="p42">
+			<div class="p43">
+				<h2>Yuvan</h2>
+				<h3>ceo of Music</h3>
+			</div>
+		</div>
+	</section>
+	<section class="parent5">
+		<div class="child51">
+			<a href="#" class="p52">FAQ</a>
+			<h1 class="p53">Full Range Of Travel Service</h1>
+		</div>
+	</section>
+	<section class="parent6">
+		<div class="d1">
+			<ul>
+				<li><a href="#">+</a>Start the automated process</li>
+				<li><a href="#">+</a>The automated process stared</li>
+				<li><a href="#">+</a>Automated process started</li>
+				<li><a href="#">+</a>Automated process the magic</li>
+			</ul>
+
+		</div>
+		<div class="d2">
+			<img src="./image/travelser" height="300px" width="300px">
+		</div>
+		<div class="d3">
+			<button>Book your Destination</button>
+		</div>
+	</section>
+	<section class="parent7">
+		<div class="p71">
+			<img src=" ./image/d71" width="80%" height="80%">
+		</div>
+		<div class="p72">
+			<a href="https://youtu.be/QYA7Jy8Z0lA?si=VisNYZI9-lmgEBbA"><img src="./image/play.1.png" height="60px"
+					width="70px"></a>
+			<h3>Check Our Last Tour</h3>
+		</div>
+	</section>
+	<section class="parent8">
+		<div class="p81">
+			<ul>
+				<li class="i81"><img src="./image/slide1.jpg" height=250px width=280px></li>
+				<li class="i82"><img src="./image/slide2.jpg" height=250px width=280px></li>
+				<li class="i83"><img src="./image/slide3" height=250px width=280px></li>
+				<li class="i84"><img src="./image/slide4.jpeg" height=250px width=280px></li>
+				<li class="i85"><img src="./image/slide5.jpg" height=250px width=280px></li>
+			</ul>
+		</div>
+	</section>
+	<article class="parent9">
+		<div class="p91 ">
+			<img src="./image/image1.png" height="70px" width="70px">
+			<h1>Tralive</h1><br>
+			<p>This was full amazing travel in the world and we believe that every one enjoy it with most happiness</p>
+		</div>
+		<div class="p92">
+			<ul>
+				<h2>Navigation</h2>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="p93">
+			<h2>Services</h2>
+			<ul>
+				<li>Blackforest</li>
+				<li>Bodhubon</li>
+				<li>Rongdhonu</li>
+				<li>Meghrong</li>
+			</ul>
+		</div>
+		<div class="p94">
+			<ul>
+				<h2>Contact us</h2>
+				<li>76/V,Blue lane,chennai-28</li>
+				<li>Tralive@gmail.com</li>
+				<li>+10(78)738-9083</li>
+			</ul>
+		</div>
+	</article>
+</body>
+
+</html>
